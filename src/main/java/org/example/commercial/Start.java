@@ -19,9 +19,7 @@ public class Start {
         listSalaires.add(commercial2);
     }
 
-    public static void MenuGestion(){
-
-
+    public static void AffichageMenu(){
         System.out.println("=====  Gestion des employès =====");
         System.out.println("");
         System.out.println("1 -- Ajouter un employé");
@@ -31,6 +29,12 @@ public class Start {
 
         System.out.println("");
         System.out.println("Entrez votre choix :");
+    }
+
+    public static void MenuGestion(){
+
+
+        AffichageMenu();
         Scanner sc = new Scanner(System.in);
         int choix =  sc.nextInt();
         while(choix != 0){
@@ -57,7 +61,7 @@ public class Start {
         }
     }
 
-    public static void addEmployes(){
+    public  static void affichageMenuEmployes(){
         System.out.println("=====  Ajouter un employé =====");
         System.out.println("");
         System.out.println("1 - Salarié");
@@ -65,6 +69,10 @@ public class Start {
         System.out.println("0 - Retour");
         System.out.println("");
         System.out.println("Entrez votre choix");
+    }
+
+    public static void addEmployes(){
+       affichageMenuEmployes();
         Scanner sc = new Scanner(System.in);
         int choix1 = sc.nextInt();
 
@@ -106,7 +114,7 @@ public class Start {
         listSalaires.add(addSalarie);
         System.out.println(addSalarie);
 
-        addEmployes();
+        affichageMenuEmployes();
     }
 
     public static void addCommercial(){
@@ -132,7 +140,7 @@ public class Start {
         listSalaires.add(addCommercial);
         System.out.println(addCommercial);
 
-        addEmployes();
+        affichageMenuEmployes();
     }
     public static void showSalaire(){
         System.out.println("===== Salaire des employés =====");
@@ -141,7 +149,7 @@ public class Start {
         for (Salarie salaries : listSalaires){
             salaries.AfficherSalaire();
         }
-        MenuGestion();
+        AffichageMenu();
     }
 
     public  static void searchEmployes(){
@@ -163,6 +171,6 @@ public class Start {
         if(notFound){
             System.out.println("Aucun salarié trouvé");
         }
-        MenuGestion();
+        AffichageMenu();
     }
 }

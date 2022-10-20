@@ -1,19 +1,6 @@
 package org.example;
 
-import org.example.agence.*;
-import org.example.chaise.Chaise;
-import org.example.classe.Student;
-import org.example.classe.Teacher;
-import org.example.commercial.Start;
-import org.example.maison.Apartment;
-import org.example.maison.Door;
-import org.example.maison.House;
-import org.example.maison.Person;
-import org.example.pendu.Pendu;
-import org.example.salarie.Application;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.example.commercial.bookmanagement.Demo;
 
 public class Main {
     public static void main(String[] args) {
@@ -101,7 +88,9 @@ public class Main {
 
 //        Application.Main();
 
-        Start.init();
-        Start.MenuGestion();
+//        Start.init();
+//        Start.MenuGestion();
+
+        Demo.main();
     }
 }
